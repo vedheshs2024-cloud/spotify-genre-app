@@ -16,7 +16,7 @@ st.header("Spotify Songs’ Genre Segmentation")
 st.text("Jupyter NoteBook Link ")
 st.link_button("Open Jupyter program", "https://drive.google.com/file/d/1E2HCT3EHcY4Jf4TXNHBplWu8heuSGDcF/view?usp=drivesdk")
 
-df = pd.read_csv(r"D:\blender\spotify dataset.csv")
+df = pd.read_csv("spotify dataset.csv")
 df.dropna(inplace=True)
 
 df.drop_duplicates(subset=['track_name',  'track_artist'], keep='first', inplace=True)
@@ -98,6 +98,7 @@ if f:
 
 
 recommend_songs(s,a,X,df)
+
 
 
 
